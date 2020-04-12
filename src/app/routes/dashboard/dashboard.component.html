@@ -1,9 +1,0 @@
-<div *ngFor="let p of people; trackBy: trackBy" class="md:flex mb-2 bg-white shadow-lg rounded-lg p-6">
-  <img class="h-24 w-24 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6" [src]="p.avatar" />
-  <div class="text-center md:text-left">
-    <h2 class="text-lg">{{ p.name }}</h2>
-    <div class="text-purple-500">{{ p.age }} years - {{ p.address }}</div>
-    <div class="text-gray-600">{{ p.phone }}</div>
-    <div class="text-gray-600">{{ p.locationX }}, {{ p.locationY }}</div>
-  </div>
-</div>
