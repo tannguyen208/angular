@@ -1,9 +1,7 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
-import { RouterModule } from "@angular/router";
-
-import { NgZorroAntdModule } from "ng-zorro-antd";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 const MODULES = {
   ANGULAR: [
@@ -12,7 +10,7 @@ const MODULES = {
     FormsModule,
     ReactiveFormsModule,
   ],
-  OTHERS: [NgZorroAntdModule]
+  OTHERS: []
 };
 
 @NgModule({

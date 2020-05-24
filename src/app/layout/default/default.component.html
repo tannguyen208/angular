@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<div class="window-container" *ngIf="isReady" [ngClass]="{'top': (appearanceService.toolbar$ | async) === 'top'}">
+  <div class="left-navigation theme-left-nav" [ngClass]="{'top': (appearanceService.toolbar$ | async) === 'top'}"></div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
