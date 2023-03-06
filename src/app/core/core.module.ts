@@ -3,6 +3,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AuthGuard } from "@core/guard/auth.guard";
 import { TokenInterceptor } from "@core/interceptors/token.interceptor";
+import { RequestQueueInterceptor } from "@core/interceptors/request-queue.interceptor";
 import { throwIfAlreadyLoaded } from "@core/guard/module-import.guard";
 
 const DIRECTIVES = [];
@@ -16,9 +17,14 @@ const DIRECTIVES = [];
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestQueueInterceptor,
+      multi: true,
+    },
+  ],
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
